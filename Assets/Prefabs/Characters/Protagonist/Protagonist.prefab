@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 7693717497394592964}
   - component: {fileID: -7190029572242898042}
   - component: {fileID: 3465650073747749175}
+  - component: {fileID: 8607490771190938333}
+  - component: {fileID: 3285791364433634241}
   m_Layer: 7
   m_Name: Protagonist
   m_TagString: Untagged
@@ -63,7 +65,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   canJump: 0
+  canDash: 0
   jumpForce: 7
+  dashCooldown: 1
+  dashForce: 5
+  _inputDirection: 0
 --- !u!50 &-7190029572242898042
 Rigidbody2D:
   serializedVersion: 4
@@ -99,8 +105,39 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 0.36, y: 0.87}
   m_Direction: 0
+--- !u!95 &8607490771190938333
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2331266572283319087}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 744d8397eef23d04ba9d49a41b8736b5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3285791364433634241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2331266572283319087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16fb67224f0a43141b45a73450f75e13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3597568741734735847
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,7 +164,7 @@ Transform:
   m_GameObject: {fileID: 3597568741734735847}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 7434670073702593399}
   m_RootOrder: 0
@@ -172,8 +209,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: bd3cb4af8406d4436a2ae8c2aafe1f8d, type: 3}
-  m_Color: {r: 0.7924528, g: 0.11512991, b: 0.11512991, a: 1}
+  m_Sprite: {fileID: -8468551184017497215, guid: 1d95df156826cd24dbdd50059c7c56b0, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
