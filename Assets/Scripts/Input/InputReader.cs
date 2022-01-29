@@ -10,6 +10,7 @@ public class InputReader : ScriptableObject, GameInput.IGameplayActions
     public VoidEventChannelSO interactEvent = default;
     public VoidEventChannelSO jumpEvent = default;
     public VoidEventChannelSO dashEvent = default;
+    public event UnityAction advanceDialogueEvent = delegate { };
     private GameInput gameInput;
 
     private void OnEnable() {
@@ -27,6 +28,14 @@ public class InputReader : ScriptableObject, GameInput.IGameplayActions
     public void EnableGameplayInput()
 	{
         gameInput.Gameplay.Enable();
+	}
+
+    public void EnableDialogueInput()
+	{
+		// gameInput.Menus.Disable();
+		gameInput.Gameplay.Disable();
+
+		// gameInput.Dialogues.Enable();
 	}
 
     public void DisableAllInput() {
