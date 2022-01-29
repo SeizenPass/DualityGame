@@ -166,3 +166,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3991097981addc4b9a45cf7b7493101, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _persistentManagersScene: {fileID: 11400000, guid: f8927b8a67b22c94596a60f8c8e5ef1b, type: 2}
+  _menuToLoad:
+  - {fileID: 11400000, guid: 4dca846fa8448cf4398d3b22f8c7777e, type: 2}
+  _menuLoadChannel:
+    m_AssetGUID: 3d603759d87fbec4c83f388e116b6739
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0

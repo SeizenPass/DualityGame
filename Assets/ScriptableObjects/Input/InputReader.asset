@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45220f07ee6eca545ab2e73853a518ca, type: 3}
   m_Name: InputReader
   m_EditorClassIdentifier: 
-  moveEvent: {fileID: 0}
-  attackEvent: {fileID: 0}
+  moveEvent: {fileID: 11400000, guid: 6793491efd83fa0488dc4ae3f13ee3c9, type: 2}
+  attackEvent: {fileID: 11400000, guid: 872210801098b844bace427b784804bd, type: 2}
+  interactEvent: {fileID: 11400000, guid: 92f16c844ad3be7429e05a01974fee30, type: 2}
+  jumpEvent: {fileID: 11400000, guid: 99224445457445547bf323ab45f0ef40, type: 2}
+  dashEvent: {fileID: 11400000, guid: a27c7bbd4c458f442b61391a0e901908, type: 2}

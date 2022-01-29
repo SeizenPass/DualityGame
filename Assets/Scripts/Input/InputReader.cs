@@ -5,8 +5,11 @@ using UnityEngine.Events;
 [CreateAssetMenu(fileName = "InputReader", menuName = "Game/Input Reader")]
 public class InputReader : ScriptableObject, GameInput.IGameplayActions
 {
-    public Vector2EventChannelSO moveEvent = default;
+    public FloatEventChannelSO moveEvent = default;
     public VoidEventChannelSO attackEvent = default;
+    public VoidEventChannelSO interactEvent = default;
+    public VoidEventChannelSO jumpEvent = default;
+    public VoidEventChannelSO dashEvent = default;
     private GameInput gameInput;
 
     private void OnEnable() {
@@ -31,14 +34,31 @@ public class InputReader : ScriptableObject, GameInput.IGameplayActions
     }
 
     public void OnMove(InputAction.CallbackContext ctx) {
-        moveEvent.RaiseEvent(ctx.ReadValue<Vector2>());
+        moveEvent.RaiseEvent(ctx.ReadValue<float>());
     }
 
     public void OnAttack(InputAction.CallbackContext ctx) {
-        attackEvent.RaiseEvent();
+        if (ctx.phase == InputActionPhase.Performed) 
+            attackEvent.RaiseEvent();
+    }
+
+    public void OnInteract(InputAction.CallbackContext ctx) {
+        if (ctx.phase == InputActionPhase.Performed)
+            interactEvent.RaiseEvent();
+    }
+
+    public void OnJump(InputAction.CallbackContext ctx) {
+        if (ctx.phase == InputActionPhase.Performed)
+            jumpEvent.RaiseEvent();
+    }
+
+    public void OnDash(InputAction.CallbackContext ctx) {
+        if (ctx.phase == InputActionPhase.Performed)
+            dashEvent.RaiseEvent();
     }
 
     public void OnTest(InputAction.CallbackContext ctx) {
-        Debug.Log("Works!");
+        if (ctx.phase == InputActionPhase.Performed)
+            Debug.Log("Works!");
     }
 }
