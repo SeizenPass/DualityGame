@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd510f8ad2c36d3408bbbdc861de003d, type: 3}
   m_Name: SoundEmitterFactory
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4387038159236299229, guid: c4e7d558e32637648832574f0aa7fdbf, type: 3}
+  prefab: {fileID: 4208798310655593324, guid: 4e849a35fda33ef49b8577f49b746d7e, type: 3}
