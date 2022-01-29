@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707424982885985391}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.48, y: 0, z: 0}
+  m_LocalPosition: {x: 0.618, y: 0, z: 0}
   m_LocalScale: {x: 1.8125, y: 1.75, z: 1}
   m_Children: []
   m_Father: {fileID: 540851056323581533}
@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 7758214681674048096}
   - component: {fileID: -1514816882059998733}
   - component: {fileID: 6741124001194089238}
+  - component: {fileID: 4430822672869335920}
   m_Layer: 7
   m_Name: ProtagonistBeast
   m_TagString: Untagged
@@ -115,8 +116,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
+  m_Offset: {x: 0.105966866, y: -0.009895027}
+  m_Size: {x: 0.57151383, y: 1.1307184}
   m_Direction: 0
 --- !u!114 &7758214681674048096
 MonoBehaviour:
@@ -131,7 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statsSO: {fileID: 11400000, guid: fa4b0adfe6e5c9d439a1bb8dec7b73e6, type: 2}
-  attackRadius: 1
+  attackRadius: 0.22
   attackPoint: {fileID: 9126010063615732744}
   targetLayers:
     serializedVersion: 2
@@ -154,6 +155,7 @@ MonoBehaviour:
   jumpForce: 7
   dashCooldown: 1
   dashForce: 5
+  _inputDirection: 0
 --- !u!95 &6741124001194089238
 Animator:
   serializedVersion: 3
@@ -164,7 +166,7 @@ Animator:
   m_GameObject: {fileID: 5663080317557822851}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bf73ae6f990bcb044840eec39092a030, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -173,6 +175,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4430822672869335920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5663080317557822851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f09e150e72b40642890cf7340273f6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7578219427930613065
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,7 +213,7 @@ Transform:
   m_GameObject: {fileID: 7578219427930613065}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 540851056323581533}
   m_RootOrder: 0
@@ -244,8 +258,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: bd3cb4af8406d4436a2ae8c2aafe1f8d, type: 3}
-  m_Color: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 1}
+  m_Sprite: {fileID: -4039291315573906701, guid: 7f56c02d98e294941bf5ee017afebc47, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

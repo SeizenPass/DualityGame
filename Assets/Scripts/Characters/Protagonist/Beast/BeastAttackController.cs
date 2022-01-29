@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BeastAttackController : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class BeastAttackController : MonoBehaviour
     public float attackRadius = 1f;
     public Transform attackPoint;
     public LayerMask targetLayers;
+    public event UnityAction attackEvent = delegate {};
 
     private void Awake() {
         _protagonist = GetComponent<Protagonist>();
@@ -17,15 +19,18 @@ public class BeastAttackController : MonoBehaviour
     }
 
     private void OnEnable() {
-        _inputReader.attackEvent.OnEventRaised += Attack;
+        _inputReader.attackEvent.OnEventRaised += OnAttack;
     }
 
     private void OnDisable() {
-        _inputReader.attackEvent.OnEventRaised -= Attack;
+        _inputReader.attackEvent.OnEventRaised -= OnAttack;
+    }
+
+    public void OnAttack() {
+        attackEvent.Invoke();
     }
 
     public void Attack() {
-        Debug.Log("Attacked!");
         Collider2D[] cols = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, targetLayers);
         foreach (var item in cols)
         {

@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PersonMovementController : MonoBehaviour
 {
     private Protagonist _protagonist;
     private InputReader _inputReader;
     private Rigidbody2D _rigidBody2D;
+    [HideInInspector] public event UnityAction dashEvent = delegate {};
     public float speed;
     public bool canJump = false;
     public bool canDash = false;
@@ -14,7 +16,7 @@ public class PersonMovementController : MonoBehaviour
     public float dashCooldown = 1;
     public float dashForce = 5;
     private float lastDashTime;
-    private float _inputDirection;
+    [HideInInspector] public float _inputDirection;
     private bool _facingRight = true;
     private void Awake() {
         _protagonist = GetComponent<Protagonist>();
@@ -71,6 +73,8 @@ public class PersonMovementController : MonoBehaviour
 
     private void OnDash() {
         if (canDash && lastDashTime + dashCooldown < Time.time) {
+            lastDashTime = Time.time;
+            dashEvent.Invoke();
             _rigidBody2D.AddForce(new Vector2(_facingRight ? dashForce : -dashForce, 0), ForceMode2D.Impulse);
         }
     }
