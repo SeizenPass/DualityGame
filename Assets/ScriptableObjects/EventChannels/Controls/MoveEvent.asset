@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a305457ba44b35c4497c8e34c589157f, type: 3}
+  m_Script: {fileID: 11500000, guid: 54131d44fe3bfc74098a3737cb81600e, type: 3}
   m_Name: MoveEvent
   m_EditorClassIdentifier: 
   description: 
