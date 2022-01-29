@@ -35,6 +35,15 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Move"",
+                    ""type"": ""Value"",
+                    ""id"": ""aaa210c3-3cdb-4e74-8345-5d5052c13b20"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -48,6 +57,61 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
                     ""action"": ""Test"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""WASD"",
+                    ""id"": ""464f2cbd-c797-4c47-b147-bbaedbffabb5"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""ce421a98-445b-486b-96ad-49cc9aa9cd16"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""adbe388c-0a43-4839-9fee-bd8d829cfa40"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""8dfd23ae-5e2b-4bc7-83da-dab0a05d1b61"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""e704d17b-2d2d-4509-9c9e-b2f0df03b25e"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         },
@@ -63,6 +127,7 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
         // Gameplay
         m_Gameplay = asset.FindActionMap("Gameplay", throwIfNotFound: true);
         m_Gameplay_Test = m_Gameplay.FindAction("Test", throwIfNotFound: true);
+        m_Gameplay_Move = m_Gameplay.FindAction("Move", throwIfNotFound: true);
         // Menu
         m_Menu = asset.FindActionMap("Menu", throwIfNotFound: true);
     }
@@ -125,11 +190,13 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Gameplay;
     private IGameplayActions m_GameplayActionsCallbackInterface;
     private readonly InputAction m_Gameplay_Test;
+    private readonly InputAction m_Gameplay_Move;
     public struct GameplayActions
     {
         private @GameInput m_Wrapper;
         public GameplayActions(@GameInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @Test => m_Wrapper.m_Gameplay_Test;
+        public InputAction @Move => m_Wrapper.m_Gameplay_Move;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -142,6 +209,9 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
                 @Test.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnTest;
                 @Test.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnTest;
                 @Test.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnTest;
+                @Move.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMove;
+                @Move.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMove;
+                @Move.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMove;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -149,6 +219,9 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
                 @Test.started += instance.OnTest;
                 @Test.performed += instance.OnTest;
                 @Test.canceled += instance.OnTest;
+                @Move.started += instance.OnMove;
+                @Move.performed += instance.OnMove;
+                @Move.canceled += instance.OnMove;
             }
         }
     }
@@ -181,6 +254,7 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
     public interface IGameplayActions
     {
         void OnTest(InputAction.CallbackContext context);
+        void OnMove(InputAction.CallbackContext context);
     }
     public interface IMenuActions
     {
