@@ -1,0 +1,40 @@
+{
+    "name": "GameInput",
+    "maps": [
+        {
+            "name": "Gameplay",
+            "id": "567817b5-269f-473e-8595-9279bfae672f",
+            "actions": [
+                {
+                    "name": "Test",
+                    "type": "Button",
+                    "id": "e604c88d-1d76-439c-b4c4-20b7c2d2643c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "9489d641-6d11-4ed5-ba94-845ef0e9e5e7",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Test",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Menu",
+            "id": "4de9683f-892f-4f20-9553-00eb5de75cb8",
+            "actions": [],
+            "bindings": []
+        }
+    ],
+    "controlSchemes": []
+}
