@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707424982885985391}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.618, y: 0, z: 0}
+  m_LocalPosition: {x: 1.95, y: -0.01, z: 0}
   m_LocalScale: {x: 1.8125, y: 1.75, z: 1}
   m_Children: []
   m_Father: {fileID: 540851056323581533}
@@ -94,10 +94,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
+  m_Mass: 2
+  m_LinearDrag: 1
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -116,8 +116,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.105966866, y: -0.009895027}
-  m_Size: {x: 0.57151383, y: 1.1307184}
+  m_Offset: {x: 0.43412876, y: -0.057531476}
+  m_Size: {x: 1.4183831, y: 3.300821}
   m_Direction: 0
 --- !u!114 &7758214681674048096
 MonoBehaviour:
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statsSO: {fileID: 11400000, guid: fa4b0adfe6e5c9d439a1bb8dec7b73e6, type: 2}
-  attackRadius: 0.22
+  attackRadius: 0.77
   attackPoint: {fileID: 9126010063615732744}
   targetLayers:
     serializedVersion: 2
@@ -149,12 +149,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df5642c839b8cc649bd99fdbbe342f38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 15
   canJump: 1
   canDash: 1
-  jumpForce: 7
+  jumpForce: 30
   dashCooldown: 1
-  dashForce: 5
+  dashForce: 15
   _inputDirection: 0
 --- !u!95 &6741124001194089238
 Animator:
@@ -213,7 +213,7 @@ Transform:
   m_GameObject: {fileID: 7578219427930613065}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -2, y: 2, z: 2}
+  m_LocalScale: {x: -6, y: 6, z: 6}
   m_Children: []
   m_Father: {fileID: 540851056323581533}
   m_RootOrder: 0
