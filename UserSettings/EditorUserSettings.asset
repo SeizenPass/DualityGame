@@ -6,31 +6,34 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedScenePath-0:
-      value: 22424703114646680e0b0227036c6c111b07142f1f2b233e2867083debf42d
-      flags: 0
-    RecentlyUsedScenePath-1:
       value: 22424703114646680e0b0227036c721518020b65012d2825633c133af6f9
       flags: 0
-    RecentlyUsedScenePath-2:
-      value: 22424703114646680e0b0227036c7c1f0412570d2d2523202128047df7ee3d2cfb
-      flags: 0
-    RecentlyUsedScenePath-3:
-      value: 22424703114646680e0b0227036c73150012143963042732012c0b36eeae2136ebf32f
-      flags: 0
-    RecentlyUsedScenePath-4:
-      value: 22424703114646680e0b0227036c731500121439630a273e2920091fe7f63134acf238e0f323
-      flags: 0
-    RecentlyUsedScenePath-5:
-      value: 22424703114646680e0b0227036c7c1f0412571a293a35393e3d183df6cd3536e3e033fbf4742a323016f6
-      flags: 0
-    RecentlyUsedScenePath-6:
+    RecentlyUsedScenePath-1:
       value: 22424703114646680e0b0227036c721518020b6501292f3e002c1326acf53a31f6fe
       flags: 0
-    RecentlyUsedScenePath-7:
+    RecentlyUsedScenePath-2:
+      value: 22424703114646680e0b0227036c7c1f0412571a293a35393e3d183df6cd3536e3e033fbf4742a323016f6
+      flags: 0
+    RecentlyUsedScenePath-3:
+      value: 22424703114646680e0b0227036c761e1f0357032221327e38271427fb
+      flags: 0
+    RecentlyUsedScenePath-4:
+      value: 22424703114646680e0b0227036c7c1f0412570d2d2523202128047df7ee3d2cfb
+      flags: 0
+    RecentlyUsedScenePath-5:
+      value: 22424703114646680e0b0227036c731500121439631c232339693136f4e53876f7e93ffdfe
+      flags: 0
+    RecentlyUsedScenePath-6:
       value: 22424703114646680e0b0227036c731500121439630a273e2920091fe7f63134acf238e0f323
       flags: 0
-    RecentlyUsedScenePath-8:
+    RecentlyUsedScenePath-7:
       value: 22424703114646680e0b0227036c73150012143963042732012c0b36eeae2136ebf32f
+      flags: 0
+    RecentlyUsedScenePath-8:
+      value: 22424703114646680e0b0227036c7315001214396300293d281b123cefcc312ee7eb78fce9332b25
+      flags: 0
+    RecentlyUsedScenePath-9:
+      value: 22424703114646680e0b0227036c73150012143963092b393f281301edef3914e7f133e5a92f31352d1b
       flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650
