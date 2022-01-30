@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3465650073747749175}
   - component: {fileID: 8607490771190938333}
   - component: {fileID: 3285791364433634241}
+  - component: {fileID: 8134583955836882032}
   m_Layer: 7
   m_Name: Protagonist
   m_TagString: Untagged
@@ -137,6 +138,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16fb67224f0a43141b45a73450f75e13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8134583955836882032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2331266572283319087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7e2de792cf95c249a9bcede89d4b97d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sfxEventChannel: {fileID: 11400000, guid: ec24c56ae5620124586f340752196a1f, type: 2}
+  _audioConfig: {fileID: 11400000, guid: 9a6893803e10d0345ad2f5e88af8e67e, type: 2}
+  footstep: {fileID: 11400000, guid: ab9b4af5c99679742833145a19cbae9c, type: 2}
 --- !u!1 &3597568741734735847
 GameObject:
   m_ObjectHideFlags: 0

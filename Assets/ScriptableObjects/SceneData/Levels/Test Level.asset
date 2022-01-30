@@ -20,5 +20,5 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  musicTrack: {fileID: 0}
+  musicTrack: {fileID: 11400000, guid: 8210ac84aae037c44be06f4ae94a0d0f, type: 2}
   locationName: Test Ground

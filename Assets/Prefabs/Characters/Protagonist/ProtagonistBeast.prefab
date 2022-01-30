@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: -1514816882059998733}
   - component: {fileID: 6741124001194089238}
   - component: {fileID: 4430822672869335920}
+  - component: {fileID: 3364072503620618749}
   m_Layer: 7
   m_Name: ProtagonistBeast
   m_TagString: Untagged
@@ -187,6 +188,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f09e150e72b40642890cf7340273f6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3364072503620618749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5663080317557822851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17d96ddd0601940409ac92de7478f768, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sfxEventChannel: {fileID: 11400000, guid: ec24c56ae5620124586f340752196a1f, type: 2}
+  _audioConfig: {fileID: 11400000, guid: 9a6893803e10d0345ad2f5e88af8e67e, type: 2}
+  footstep: {fileID: 11400000, guid: e8e8fc760d140f84dab15efd0da15f0c, type: 2}
+  attack: {fileID: 11400000, guid: a1b5ff6e656c9354bb584641b9dbe413, type: 2}
+  dash: {fileID: 11400000, guid: 9754fcbad6423c04896886ccff2b4959, type: 2}
+  jump: {fileID: 11400000, guid: 8e2c8940708dc5f41be733c6a1348f03, type: 2}
 --- !u!1 &7578219427930613065
 GameObject:
   m_ObjectHideFlags: 0

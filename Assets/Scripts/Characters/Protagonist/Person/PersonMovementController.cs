@@ -9,6 +9,7 @@ public class PersonMovementController : MonoBehaviour
     private InputReader _inputReader;
     private Rigidbody2D _rigidBody2D;
     [HideInInspector] public event UnityAction dashEvent = delegate {};
+    [HideInInspector] public event UnityAction jumpEvent = delegate {};
     public float speed;
     public bool canJump = false;
     public bool canDash = false;
@@ -56,7 +57,7 @@ public class PersonMovementController : MonoBehaviour
         return _facingRight;
     }
 
-    private bool IsGrounded() {
+    public bool IsGrounded() {
         return Mathf.Abs(_rigidBody2D.velocity.y) < 0.001f;
     }
 
@@ -67,6 +68,7 @@ public class PersonMovementController : MonoBehaviour
 
     private void OnJump() {
         if (canJump && IsGrounded()) {
+            jumpEvent.Invoke();
             _rigidBody2D.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
         }
     }
