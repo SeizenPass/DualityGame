@@ -15,11 +15,13 @@ public class Health : MonoBehaviour
     }
 
     public void DealDamage(int dmg = 1) {
+        Debug.Log("UGH");
         currentHealth -= dmg;
+        onHurt.Invoke();
         if (currentHealth < 0) {
             onDie.Invoke();
             currentHealth = 0;
-        } else onHurt.Invoke();
+        } 
     }
 
     public void Heal(int amount = 1) {
