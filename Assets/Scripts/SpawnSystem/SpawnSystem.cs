@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using UnityEngine;
+using System.Collections;
 
 public class SpawnSystem : MonoBehaviour
 {
@@ -73,6 +74,18 @@ public class SpawnSystem : MonoBehaviour
 
 		_playerInstantiatedChannel.RaiseEvent(playerInstance.transform); // The CameraSystem will pick this up to frame the player
 		_playerTransformAnchor.Transform = playerInstance.transform;
+		StartCoroutine(Broadcast());
+	}
+
+	private IEnumerator Broadcast() {
+		while (true) {
+			_playerInstantiatedChannel.RaiseEvent(_playerTransformAnchor.Transform);
+			yield return new WaitForSeconds(3f);
+		}
+	}
+
+	private void OnDestroy() {
+		StopCoroutine(Broadcast());
 	}
 
 	private Transform GetSpawnLocation(int index, Transform[] spawnLocations)

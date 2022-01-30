@@ -34,8 +34,10 @@ public class BeastAttackController : MonoBehaviour
         Collider2D[] cols = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, targetLayers);
         foreach (var item in cols)
         {
+            Debug.Log("Found!");
             Health h;
             if (item.TryGetComponent<Health>(out h)) {
+                Debug.Log("Dealt!");
                 h.DealDamage(statsSO.damage);
             }
         }
