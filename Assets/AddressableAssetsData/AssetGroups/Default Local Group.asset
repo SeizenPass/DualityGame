@@ -45,6 +45,10 @@ MonoBehaviour:
     m_Address: Assets/Scenes/Levels/BanditLevel.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: be33400319ff0a4499196213eddfb043
+    m_Address: Assets/Scenes/Levels/LabLevel.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 90cafe2d72003e44ca58392101fd70c3, type: 2}
   m_SchemaSet:
