@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baf70783a1f63c044b5b1297653275e9, type: 3}
   m_Name: 3D_SFX_Config
   m_EditorClassIdentifier: 
-  OutputAudioMixerGroup: {fileID: 646275181740388129, guid: 1f64ec85922734748a03e8cdd46177e1, type: 2}
+  OutputAudioMixerGroup: {fileID: 646275181740388129, guid: 148f80a4662e912468ada6843257f581, type: 2}
   _priorityLevel: 128
   Mute: 0
   Volume: 1

@@ -173,7 +173,7 @@ public class SceneLoader : MonoBehaviour
 		_onSceneReady.RaiseEvent(); //Spawn system will spawn the PigChef
 	}
 
-	private void ExitGame()
+	public void ExitGame()
 	{
 		Application.Quit();
 		Debug.Log("Exit!");
