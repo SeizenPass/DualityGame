@@ -53,6 +53,14 @@ MonoBehaviour:
     m_Address: Assets/ScriptableObjects/SceneData
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 99b09cebc66e1a24fbbada6fa2cd4098
+    m_Address: Assets/Scenes/Levels/HomeRoomLevel.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: dbff31f07a8170544b81685c141c5acc
+    m_Address: Assets/Scenes/Levels/AmiranRoomLevel.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 90cafe2d72003e44ca58392101fd70c3, type: 2}
   m_SchemaSet:
