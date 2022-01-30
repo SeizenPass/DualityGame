@@ -61,6 +61,10 @@ MonoBehaviour:
     m_Address: Assets/Scenes/Levels/AmiranRoomLevel.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 132160306aa34454d9c2f47ff0cfaa84
+    m_Address: Assets/ScriptableObjects/SceneData/Levels
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 90cafe2d72003e44ca58392101fd70c3, type: 2}
   m_SchemaSet:
